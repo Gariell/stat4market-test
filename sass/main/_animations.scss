@@ -1,0 +1,30 @@
+.animation-highlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.animation-highlight::after {
+  content: "";
+  height: calc(100% + 100px);
+  width: 50px;
+  position: absolute;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+  z-index: 8;
+  opacity: .2;
+  background: #fff;
+  animation: highlight 6s ease-in-out 2s infinite;
+}
+
+@keyframes highlight {
+  0% {
+    left: -75px;
+  }
+  20% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
+}

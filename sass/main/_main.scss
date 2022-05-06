@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include mainFont;
+  ::selection {
+    color: cl(white);
+    background-color: cl(purple); 
+ }
+}
+main {
+  overflow: hidden;
+}
+
+h1, h2, h3,h4,h5,h6,p{
+  margin: 0;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+a,a:visited,a:focus {
+  color: cl(black);
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input {
+  &:focus { outline: none; }
+  &::placeholder { color: cl(black); }
+  &[type="number"] { -moz-appearance: textfield; }
+  &[type="number"]::-webkit-inner-spin-button { display: none;  }
+  &[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+  &[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration { display: none; }
+}
+
+.container {
+  width: 100%;
+  max-width: calc(1530px + 80px);
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.main-btn {
+  font-weight: bold;
+  background: cl(black, 1);
+  background: -ms-linear-gradient(top,  #313d4b,  #313d4b);
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 14px; 
+  @include hover {
+    background: cl(black, 0.9);
+    box-shadow: 0 0 5px cl(black, 0.1);
+  }
+}
+
+h1 { font-size: 56px; }
+h2 { font-size: 48px; }
+h3 { font-size: 42px; }
+h4 { font-size: 35px; }
+h5 { font-size: 24px; }
+h6 { font-size: 18px; }
+
+.text-regular {
+  font-size: 25px;
+}
+
+
+@media (max-width: 1530px){
+  .text-regular {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1280px){
+  h1 { font-size: 46px; }
+  h2 { font-size: 40px; }
+  h3 { font-size: 38px; }
+  h4 { font-size: 30px; }
+  h5 { font-size: 20px; }
+  h6 { font-size: 16px; }
+}
+@media (max-width: 768px){
+  h1 { font-size: 26px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 22px; }
+  h4 { font-size: 20px; }
+  h5 { font-size: 18px; }
+  h6 { font-size: 16px; }
+  .container{padding: 0 20px;}
+  .text-regular{font-size: 18px;}
+}

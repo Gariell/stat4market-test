@@ -1,0 +1,73 @@
+.hero
+  padding-top: 48px
+  &-content
+    display: flex
+    align-items: center
+    padding: 25px 0 72px 
+  &-blocktext
+    max-width: 60%
+    padding-right: 3%
+  &__title
+    line-height: 140%
+    margin-bottom: 20px
+    &_accent
+      color: cl(purple)
+  &__price
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    &_text
+      margin-left: 25px 
+      margin-bottom: 16px
+    & span
+      &:nth-child(1)
+        font-size: 20px
+        font-weight: 600
+        opacity: 0.8
+      &:nth-child(2)
+        font-size: 38px
+        font-weight: 700
+        color: cl(purple)
+      &:nth-child(3) 
+        font-size: 30px
+        opacity: 0.8
+  &__text
+    line-height: 160%
+    margin-bottom: 15px
+  &__image
+    margin-left: auto
+    width: max-content
+
+@media (max-width: 1280px)
+  .hero
+    &-content
+      position: relative
+    &-blocktext
+      max-width: 100%
+    &__text
+      padding-right: 30%
+    &__image
+      position: absolute
+      top: 160px
+      right: 0
+      width: 50%
+      transform: translateX(60%)
+@media (max-width: 768px)
+  .hero
+    padding-top: 10px   
+@media (max-width: 600px)  
+  .hero
+    &__title
+      padding-right: 110px
+    &__text
+      padding: 0
+    &__image
+      top: 0px
+      width: 245px
+@media (max-width: 350px) 
+  .hero
+    &__title
+      font-size: 22px
+      padding-right: 0px
+    &__image
+      display: none

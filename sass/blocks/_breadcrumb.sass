@@ -1,0 +1,19 @@
+.breadcrumb 
+  &-list
+    display: flex
+    &__item
+      color: cl(black, 0.5)
+      padding-left: 26px
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 8px
+        width: 10px
+        height: 1px
+        background: cl(black, 0.5)
+      &:first-child
+        padding-left: 0
+        &::before
+          display: none

@@ -1,0 +1,211 @@
+.header
+  &-content 
+    display: flex
+    align-items: center
+    padding-top: 8px
+  &__logo
+    position: relative
+    padding: 46px 20px 46px 78px
+    border-radius: 5px
+    @include hover
+      background: cl(purple, 0.1)
+    &_second
+      position: absolute
+      top: 50%
+      left: 0%
+      transform: translateY(calc( -50% - 36px ))
+  &__tagline
+    position: relative
+    max-width: 210px
+    padding-left: 25px
+    margin-right: 50px
+    line-height: 120%
+    font-size: 14px
+    color: cl(black, 0.9)
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 0px
+      transform: translateY(-50%)
+      width: 1px
+      height: 80px
+      background: cl(black, 0.5)
+  &__select-analytics
+    margin-right: 50px
+    font-size: 24px
+    & [data-dropdown-title]
+      display: flex 
+      align-items: center
+      @include hover
+        color: cl(purple)
+      & span
+        font-size: 0.6em
+        margin-top: 4px
+        margin-left: 10px
+    & [data-dropdown-content]
+      width: max-content
+      position: absolute
+      top: calc( 100% + 16px )
+      left: 50%
+      transform: translateX(-50%)
+      padding: 5px 0
+      border-radius: 5px
+      background: cl(white)
+      box-shadow: 2px 2px 15px 1px  cl(purple, 0.14)
+      & li 
+        padding: 16px 15px
+        @include hover
+          background: cl(purple, 0.1)
+          color: cl(purple)
+    &[data-dropdown-active]
+      & [data-dropdown-title] span
+        transform: rotate(180deg)
+  &__link
+    font-size: 24px
+    @include hover
+      color: cl(purple)
+  &__phone
+    display: flex
+    align-items: center
+    margin-left: auto
+    margin-right: 92px
+    font-size: 24px
+    @include hover
+      color: cl(purple)
+    & svg 
+      margin-right: 15px
+  &__btn
+    &-login
+      display: flex
+      align-items: center
+      padding: 9px 34px
+      background: cl(purple)
+      color: cl(white)
+      border-radius: 12px
+      font-weight: 400
+      font-size: 23px
+      transition: 0.1s
+      @include hover
+        opacity: 0.9
+        & svg 
+          transition: 0.2s
+          transform: translateX(4px)
+      & svg 
+        margin-right: 12px
+    &-burger
+      display: none
+      flex-direction: column
+      justify-content: center
+      align-items: flex-end
+      height: 44px
+      width: 55px
+      -webkit-tap-highlight-color: transparent
+      & span
+        height: 4px
+        width: 42px
+        margin: 4px 0
+        background: cl(purple)
+        border-radius: 5px
+        transition: 0.2s
+        &:nth-child(3)
+          width: 32px
+      &.active
+        & span
+          &:nth-child(1)
+            width: 32px
+          &:nth-child(3)
+            width: 52px 
+
+@media (max-width: 1530px)  
+  .header
+    &__logo
+      padding: 28px 20px 28px 60px
+      &_main
+        & svg 
+          width: 129px
+          height: auto
+      &_second
+        transform: translateY(calc( -50% - 26px ))
+        & img 
+          width: 47px
+          height: auto
+    &__tagline
+      margin-right: 40px
+      font-size: 10px
+      width: 160px
+      &::before
+        height: 62px
+    &__select-analytics
+      font-size: 20px
+      margin-right: 40px
+    &__link
+      font-size: 20px
+      margin-right: 40px
+    &__phone
+      font-size: 20px
+      margin-right: 40px
+    &__btn
+      &-login
+        font-size: 18px
+
+@media (max-width: 1280px)  
+  .header
+    &__select-analytics
+      display: none
+    &__link
+      display: none
+    &__phone
+      display: none
+    &__btn
+      &-login
+        margin-left: auto
+        margin-right: 6%
+      &-burger
+        display: flex
+  
+@media (max-width: 768px)  
+  .header
+    &__logo
+      padding: 28px 20px 28px 42px
+      &_main svg
+        width: 94px        
+      &_second img
+        width: 36px   
+    &__tagline
+      display: none
+    &__btn
+      &-login
+        padding: 10px 20px
+        margin-right: 21px
+        border-radius: 6px
+        font-size: 14px
+        & svg 
+          height: 13px
+          width: auto
+          margin-right: 4px
+@media (max-width: 370px) 
+  .header
+    &__logo
+      padding: 16px 10px 16px 26px
+      &_second
+        transform: translateY(calc( -50% - 14px ))
+        & img
+          width: 24px
+      &-login
+        padding: 8px 16px
+        margin-right: 5px
+      &-burger
+        width: 38px
+        & span
+          width: 32px
+          height: 3px
+          margin: 3px 0 
+          &:nth-child(3)
+            width: 22px
+        &.active
+          & span
+            &:nth-child(1)
+              width: 28px
+            &:nth-child(3)
+              width: 36px

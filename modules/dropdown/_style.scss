@@ -1,0 +1,27 @@
+[data-dropdown] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  & [data-dropdown-content] {
+    opacity: 0;
+    visibility: hidden;
+    & li {
+      cursor: pointer;
+    }
+  }
+  &[data-dropdown-active]{
+    & [data-dropdown-content] {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  & [data-dropdown-title] {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none; 
+    cursor: pointer;
+  }
+}

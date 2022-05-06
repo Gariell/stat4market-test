@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/png" rel="icon" href="./img/favicons/favicon-62x62.png"> 
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="header__logo">
+          <div class="header__logo_main"><svg height="28" width="163"><use xlink:href="./img/icons/sprites.svg#logo-stat4market"></use></svg></div>
+          <div class="header__logo_second"><img src="./img/icons/logo-4.svg" alt="logo-4"></div>
+        </a>
+        <p class="header__tagline">Надежный сервис аналитики для поставщиков на маркетплейсы</p>
+        <div class="header__select-analytics" data-dropdown="analytics">
+          <button data-dropdown-title>Аналитика <span>▼</span> </button>
+          <ul data-dropdown-content>
+            <li><button>Аналитика 1</button></li>
+            <li><button>Аналитика 2</button></li>
+          </ul>
+        </div>
+        <a href="#" class="header__link">Обучение</a>
+        <a type="tel" href="tel:84994503141" class="header__phone"><svg height="20" width="20"><use xlink:href="./img/icons/sprites.svg#phone"></use></svg>8 (499) 450-31-41</a>
+        <button class="header__btn-login"><svg height="23" width="23"><use xlink:href="./img/icons/sprites.svg#arrow-login"></use></svg> Войти</button>
+        <button class="header__btn-burger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main >
+    <div class="container">
+      <section class="hero">  
+        <div class="breadcrumb">
+          <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb-list">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-list__item">
+              <a href="#" title="Главная" itemprop="item">
+                <span itemprop="name">Главная</span>
+                <meta itemprop="position" content="0">
+              </a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-list__item">
+              <a href="#" title="Смартфоны" itemprop="item">
+                <span itemprop="name">Обучение</span>
+                <meta itemprop="position" content="1">
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="hero-content">
+          <div class="hero-blocktext">
+            <h1 class="hero__title"><span class="hero__title_accent">Обучающие курсы</span> для поставщиков на маркетплейсы</h1>
+            <div class="hero__price">
+              <svg height="48" width="48"><use xlink:href="./img/icons/sprites.svg#purse"></use></svg>
+              <div class="hero__price_text"><span>от</span> <span>19&nbsp;900</span> <span>₽</span></div>
+            </div>
+            <p class="text-regular hero__text">Обучающие курсы по работе и&nbsp;продвижению на маркетплейсах от практикующих селлеров</p>
+            <p class="text-regular hero__text">Добро пожаловать в&nbsp;Академию. Это место для эффективного обучения, где мы рассказываем, как работают маркетплейсы и&nbsp;никогда не вдаемся 
+              в&nbsp;теорию, которая не понадобится на практике. </p>
+            <p class="text-regular hero__text">Нащи уроки помогут понять логику работы площадок и&nbsp;взять управление продажами в&nbsp;свои руки, а не действовать наугад. Становись экспертом в&nbsp;работе с&nbsp;маркетплейсами и&nbsp;увеличивай свою прибыль.</p>
+          </div>
+          <div class="hero__image">
+            <img src="./img/pictures/hero-main.png" alt="image">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="overlay"></div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
