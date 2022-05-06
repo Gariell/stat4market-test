@@ -599,32 +599,6 @@ h6 {
   }
 }
 
-.overlay {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  background: rgba(var(--color-white--rgb), 0);
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  visibility: hidden;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.overlay.active {
-  background: rgba(var(--color-white--rgb), 0.7);
-  visibility: visible;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
 [data-dropdown] {
   position: relative;
   display: -webkit-box;
@@ -662,10 +636,6 @@ h6 {
   /* Internet Explorer/Edge */
   user-select: none;
   cursor: pointer;
-}
-
-.m-icon {
-  display: inline-block;
 }
 
 .header-content {
